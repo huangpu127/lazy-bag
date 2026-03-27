@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Chrome Extension packaging
+*.zip
+*.crx
+*.pem
+
+# Dependencies (if using npm)
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+
+# Misc
+*.bak
+*.tmp

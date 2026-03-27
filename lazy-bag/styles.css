@@ -1,0 +1,165 @@
+/* 懒人包气泡样式 */
+
+/* 悬浮按钮 - 清透蓝紫毛玻璃风格 */
+.lazy-bag-hover-btn {
+  position: fixed;
+  z-index: 2147483647;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.35) 0%, rgba(138, 100, 200, 0.3) 100%);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  color: rgba(60, 55, 100, 0.9);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow:
+    0 6px 20px rgba(102, 126, 234, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.lazy-bag-hover-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.45) 0%, rgba(138, 100, 200, 0.4) 100%);
+  box-shadow:
+    0 8px 24px rgba(102, 126, 234, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+/* 懒人包气泡 - 清透蓝紫毛玻璃风格 */
+.lazy-bag-popup {
+  position: fixed;
+  z-index: 2147483647;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 400px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0.2) 50%, rgba(138, 100, 200, 0.15) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 24px;
+  box-shadow:
+    0 12px 32px rgba(102, 126, 234, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow: auto;
+  color: rgba(50, 50, 80, 0.9);
+}
+
+/* 气泡头部 - 清透风格弱标题 */
+.lazy-bag-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(138, 100, 200, 0.1) 100%);
+  color: rgba(102, 100, 140, 0.6);
+  border-radius: 24px 24px 0 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.lazy-bag-title {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.5;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.lazy-bag-close {
+  background: rgba(102, 126, 234, 0.1);
+  border: none;
+  color: rgba(102, 100, 140, 0.6);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.lazy-bag-close:hover {
+  background: rgba(102, 126, 234, 0.2);
+  color: rgba(102, 100, 140, 0.9);
+}
+
+/* 气泡内容 */
+.lazy-bag-content {
+  padding: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(60, 55, 90, 0.95);
+}
+
+/* 解释文本 */
+.lazy-bag-text {
+  margin-bottom: 12px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* 操作按钮区域 */
+.lazy-bag-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.lazy-bag-sources-btn,
+.lazy-bag-retry-btn {
+  background: rgba(102, 126, 234, 0.12);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  color: rgba(102, 100, 160, 0.85);
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lazy-bag-sources-btn:hover,
+.lazy-bag-retry-btn:hover {
+  background: rgba(102, 126, 234, 0.22);
+  border-color: rgba(102, 126, 234, 0.35);
+  color: rgba(80, 75, 140, 0.95);
+}
+
+/* 来源链接列表 */
+.lazy-bag-sources {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(102, 126, 234, 0.15);
+}
+
+.lazy-bag-source-link {
+  display: block;
+  padding: 6px 0;
+  color: rgba(118, 75, 162, 0.85);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+  word-break: break-all;
+  transition: color 0.2s;
+}
+
+.lazy-bag-source-link:hover {
+  color: rgba(102, 126, 234, 0.95);
+  text-decoration: none;
+}
+
+/* 加载状态 */
+.lazy-bag-loading {
+  color: rgba(102, 100, 140, 0.5);
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* 错误状态 */
+.lazy-bag-error {
+  color: rgba(200, 90, 120, 0.9);
+  font-size: 13px;
+  padding: 10px 0;
+}
